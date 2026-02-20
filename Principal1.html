@@ -27,12 +27,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <base target="_top">
-    <?!=Chamar("Estilo1") ?>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
@@ -76,7 +77,9 @@ SOFTWARE.
                 <div class="input-field-obs"> <label for="obs">Assunto:</label> <textarea id="obs" name="obs" rows="4"
                         maxlength="340" placeholder="Digite o assunto do agendamento"></textarea>
                     <div id="contador">0 / 340 caracteres</div>
-                </div> <button id="btnAgendar" class="btn waves-effect waves-light" type="submit">Agendar</button>
+                </div> <button id="btnAgendar" class="btn waves-effect waves-light" type="button">
+                        Agendar
+                        </button>
             </form>
             <div id="mensagemAgendamento" style="display:none;"></div>
             <div id="mensagemHorarios" style="display:none;"></div>
@@ -90,9 +93,12 @@ SOFTWARE.
         </div>
         <script> 
         emailInput = document.getElementById('email'); nomeInput = document.getElementById('nome'); unidadeInput = document.getElementById('unidade'); emailInput.addEventListener("input", function () { this.value = this.value.toUpperCase(); }); nomeInput.addEventListener("input", function () { this.value = this.value.toUpperCase(); }); unidadeInput.addEventListener("input", function () { this.value = this.value.toUpperCase(); }); 
-        
+
+            document.getElementById("btnAgendar").addEventListener("click", function() {
+                alert("Este é apenas um protótipo para visualizar a interface de usuário.");
+            });
         </script>
-        <?!=Chamar("Form-js1")?>
+        <script src="script.js"></script>
     </main>
     <footer>
         <p>&copy; 2025 Universidade Federal Fluminense. Todos os direitos reservados.</p> <br>
